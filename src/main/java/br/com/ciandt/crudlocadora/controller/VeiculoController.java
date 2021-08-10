@@ -1,7 +1,7 @@
 package br.com.ciandt.crudlocadora.controller;
 
 import br.com.ciandt.crudlocadora.model.Veículo;
-import br.com.ciandt.crudlocadora.service.VeículoService;
+import br.com.ciandt.crudlocadora.service.VeiculoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/veículos")
-public class VeículoController {
+public class VeiculoController {
 
     @Autowired
-    private VeículoService veículoService;
+    private VeiculoService veículoService;
 
     @PostMapping
     public Veículo create(@RequestBody Veículo veículo) {

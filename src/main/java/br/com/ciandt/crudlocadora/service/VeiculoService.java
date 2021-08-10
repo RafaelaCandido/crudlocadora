@@ -1,7 +1,7 @@
 package br.com.ciandt.crudlocadora.service;
 
 import br.com.ciandt.crudlocadora.model.Veículo;
-import br.com.ciandt.crudlocadora.repository.VeículoRepository;
+import br.com.ciandt.crudlocadora.repository.VeiculoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class VeículoService {
+public class VeiculoService {
 
     @Autowired
-    private VeículoRepository veículoRepository;
+    private VeiculoRepository veículoRepository;
 
     public Veículo save(Veículo veículo) {
         return veículoRepository.save(veículo);
