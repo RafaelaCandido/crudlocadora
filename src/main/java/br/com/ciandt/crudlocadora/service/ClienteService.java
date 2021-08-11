@@ -36,4 +36,8 @@ public class ClienteService {
         clienteSalvo.setEndereco(cliente.getEndereco());
         return save(clienteSalvo);
     }
+
+    public void delete(Long id) {
+        clienteRepository.deleteById(id);
+    }
 }

@@ -3,6 +3,7 @@ package br.com.ciandt.crudlocadora.controller;
 import br.com.ciandt.crudlocadora.model.Cliente;
 import br.com.ciandt.crudlocadora.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,5 +39,10 @@ public class ClienteController {
     @PutMapping("/{id}")
     public Cliente update(@PathVariable("id") Long id, @RequestBody Cliente cliente) {
         return clienteService.update(id, cliente);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Long id) {
+        clienteService.delete(id);
     }
 }
