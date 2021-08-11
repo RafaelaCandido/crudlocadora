@@ -27,4 +27,13 @@ public class ClienteService {
     public Cliente getOne(long id) {
         return clienteRepository.findById(id).get();
     }
+
+    public Cliente update(Long id, Cliente cliente) {
+        Cliente clienteSalvo = getOne(id);
+        clienteSalvo.setNome(cliente.getNome());
+        clienteSalvo.setCpf(cliente.getCpf());
+        clienteSalvo.setTelefone(cliente.getTelefone());
+        clienteSalvo.setEndereco(cliente.getEndereco());
+        return save(clienteSalvo);
+    }
 }
